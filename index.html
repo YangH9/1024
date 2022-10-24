@@ -15,12 +15,9 @@
       }
       .word {
         position: absolute;
-        width: 200px;
-        height: 60px;
         left: 50%;
-        margin-left: -100px;
         top: 50%;
-        margin-top: -30px;
+        transform: translate(-50%);
         transition: 0.4s ease;
         animation: scalesmall 0.3s 1s ease-out both;
       }
@@ -37,16 +34,9 @@
       }
       .flash {
         display: block;
-        position: absolute;
+        position: relative;
         z-index: 9;
-        width: 200px;
-        height: 60px;
         text-align: center;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        margin: auto;
         cursor: default;
         will-change: transform;
       }
@@ -77,8 +67,8 @@
         color: #fff;
         background: #050710;
         overflow: hidden;
-        width: 200px;
-        height: 60px;
+        width: 100%;
+        height: 100%;
         clip: rect(0, 300px, 0, 0);
         will-change: transform;
       }
@@ -526,7 +516,10 @@
   <body>
     <div class="word glitch">
       <div class="flash is-off">
-        <span class="text" data-text="1024">1024</span>
+        <span class="text" data-text="1024程序员节">1024程序员节</span>
+      </div>
+      <div class="flash is-off">
+        <span class="text" data-text="永无BUG">永无BUG</span>
       </div>
     </div>
     <canvas></canvas>
